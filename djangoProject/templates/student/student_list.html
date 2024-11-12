@@ -1,0 +1,7 @@
+<h1>لیست دانشجویان</h1>
+<a href="{% url 'student_create' %}">ثبت دانشجو جدید</a>
+<ul>
+    {% for student in student %}
+        <li>{{ student.first_name }} {{ student.last_name }} - <a href="{% url 'student_update' %}">ویرایش</a></li>
+    {% endfor %}
+</ul>
